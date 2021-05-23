@@ -1,0 +1,82 @@
+body {
+  min-height: 100vh;
+  font-family: 'Source Code Pro';
+  overflow-y: scroll;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+.navbar,
+.footer {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+.navbar {
+  height: 3rem;
+  top: 0;
+  left: 0;
+  h1 {
+    padding: 1rem;
+  }
+  div {
+    padding: 1rem 2rem;
+  }
+  p {
+    font-weight: 600;
+  }
+}
+.footer {
+  left: 0;
+  bottom: 0;
+
+  ul {
+    font-weight: 600;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+  }
+  div {
+    padding: 1rem;
+    width: 10rem;
+  }
+
+  align-items: flex-end;
+}
+.home {
+  z-index: 20;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  .item {
+    scroll-snap-align: start;
+    @for $i from 1 through 4 {
+      &:nth-of-type(#{$i}) {
+        background-color: rgba(random(255), random(255), random(255), random(1));
+      }
+    }
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div {
+      max-width: 450px;
+      h2 {
+        font-size: 32px;
+        padding: 1rem 0;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
