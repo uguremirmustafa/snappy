@@ -1,5 +1,7 @@
 This project is an example for css-snap-feature created with NextJS.
 
+Visit the [live application.](https://snappy.vercel.app)
+
 ```scss
 .container {
   height: 100vh;
